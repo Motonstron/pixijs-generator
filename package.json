@@ -1,0 +1,36 @@
+{
+  "name": "generator-pixijs",
+  "version": "0.0.0",
+  "description": "Yeoman Pixi.js generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "Garfty/generator-pixijs",
+  "author": {
+    "name": "Gareth Parker",
+    "email": "gareth.parker@mindcandy.com",
+    "url": "https://github.com/garfty"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "pixi-js",
+    "games",
+    "pixi"
+  ],
+  "dependencies": {
+    "yeoman-generator": "^0.18.9",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}
