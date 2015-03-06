@@ -1,6 +1,6 @@
 PixiGame.GameLoopController = function() {
     this._isGameActive = false;
-    this._fps = 60;
+    this._fps = 15;
     this._updateInterval = null;
 }
 
@@ -23,7 +23,7 @@ PixiGame.GameLoopController.prototype.start = function() {
     this._isGameActive = true;
 
     // Create the game loop
-    this._updateInterval = setInterval(function() {
+    this._updateInterval = setTimeout(function() {
         this.update();
     }.bind(this), 1000 / this._fps);
 };
