@@ -3,9 +3,11 @@
   "version": "0.0.1",
   "description": "Yeoman Pixi.js generator",
   "license": "MIT",
-  "private": "true",
   "main": "app/index.js",
-  "repository": "Garfty/generator-pixijs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mindcandy/pixijs-generator"
+  }
   "author": {
     "name": "Gareth Parker",
     "email": "gareth.parker@mindcandy.com",
