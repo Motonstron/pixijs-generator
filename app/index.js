@@ -86,7 +86,7 @@ module.exports = yeoman.generators.Base.extend({
             bower.dependencies.modernizr = "~2.8.2";
         }
 
-        bower.dependencies.pixi = "~2.2.7";
+        bower.dependencies.pixi = "~3.0.0";
 
         this.copy('bowerrc', '.bowerrc');
         this.write('bower.json', JSON.stringify(bower, null, 2));
