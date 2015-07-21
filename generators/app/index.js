@@ -3,11 +3,14 @@
 var join = require('path').join;
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
+var _ = require('lodash');
+var slugify = require('slugify');
+var mkdirp = require('mkdirp');
 
 module.exports = yeoman.generators.Base.extend({
     constructor: function() {
         yeoman.generators.Base.apply(this, arguments);
-        this.pkg = require('../package.json');
+        this.pkg = require('../../package.json');
     },
 
     askfor: function() {
@@ -53,23 +56,42 @@ module.exports = yeoman.generators.Base.extend({
             done();
         }.bind(this));
     },
+    
+    jshint: function() {
+        this.fs.copy(
+            this.templatePath('jshintrc'),
+            this.destinationPath('.jshintrc')
+        );
+    },
 
     gruntfile: function() {
         this.template('Gruntfile.js');
     },
 
     packageJSON: function() {
-        this.template('_package.json', 'package.json');
+        this.fs.copyTpl(
+            this.templatePath('_package.json'),
+            this.destinationPath('package.json'),
+            {
+                appname: slugify(this.appname)
+            }
+        );
     },
 
     git: function() {
-        this.template('gitignore', '.gitignore');
-        this.copy('gitattributes', '.gitattributes');
+        this.fs.copy(
+            this.templatePath('gitignore'),
+            this.destinationPath('.gitignore')
+        );
+        this.fs.copy(
+            this.templatePath('gitattributes'),
+            this.destinationPath('.gitgitattributesignore')
+        );
     },
 
     bower: function() {
         var bower = {
-            name: this._.slugify(this.appname),
+            name: slugify(this.appname),
             private: true,
             dependencies: {}
         };
@@ -87,25 +109,40 @@ module.exports = yeoman.generators.Base.extend({
         }
 
         bower.dependencies.pixi = "~3.0.0";
+        
+        this.fs.copy(
+            this.templatePath('bowerrc'),
+            this.destinationPath('.bowerrc')
+        );
 
-        this.copy('bowerrc', '.bowerrc');
         this.write('bower.json', JSON.stringify(bower, null, 2));
     },
 
     editorConfig: function () {
-        this.copy('editorconfig', '.editorconfig');
+        
+        this.fs.copy(
+            this.templatePath('editorconfig'),
+            this.destinationPath('.editorconfig')
+        );
     },
 
     mainStylesheet: function() {
-        this.template('main.css', 'app/styles/main.css');
+        this.fs.copy(
+            this.templatePath('main.css'),
+            this.destinationPath('app/styles/main.css')
+        );
     },
 
     app: function() {
         this.directory('app');
-        this.mkdir('app/scripts');
-        this.mkdir('app/styles');
-        this.mkdir('app/images');
-        this.copy('template.index.html', 'template.index.html');
+        mkdirp('app/scripts');
+        mkdirp('app/styles');
+        mkdirp('app/images');
+        
+        this.fs.copy(
+            this.templatePath('template.index.html'),
+            this.destinationPath('template.index.html')
+        );
     },
 
     install: function() {

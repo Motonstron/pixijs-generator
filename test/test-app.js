@@ -7,12 +7,9 @@ var os = require('os');
 
 describe('pixijs:app', function () {
   before(function (done) {
-    helpers.run(path.join(__dirname, '../app'))
-      .inDir(path.join(os.tmpdir(), './temp-test'))
-      .withOptions({ 'skip-install': true })
-      .withPrompt({
-        someOption: true
-      })
+    helpers.run(path.join(__dirname, '../generators/app'))
+      .withOptions({ skipInstall: true })
+      .withPrompts({ someOption: true })
       .on('end', done);
   });
 
