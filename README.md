@@ -12,7 +12,7 @@ Once you have these installed you can run: `npm install -g generator-pixijs`
 
 Once this is complete you need to make sure you're in the directory you want to create the game in, once this is ok you can bring up Yeoman by typing `yo` in your terminal, or you can run `yo pixijs`. You will be presented with the following:
 
-![Pixi.js Generator](https://cloud.githubusercontent.com/assets/194175/8824384/0f4a5d42-306d-11e5-8b9b-eab715390f78.png);
+![Pixi.js Generator](https://cloud.githubusercontent.com/assets/194175/8824384/0f4a5d42-306d-11e5-8b9b-eab715390f78.png)
 
 You will be presented with a list of libraries:
 
