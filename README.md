@@ -1,4 +1,4 @@
-# Pixi.js Generator [![Build Status](https://secure.travis-ci.org/mindcandy/pixijs-generator.png?branch=master)](https://travis-ci.org/mindcandy/pixijs-generator)
+# Pixi.js Generator [![Build Status](https://secure.travis-ci.org/garfty/pixijs-generator.png?branch=master)](https://travis-ci.org/garfty/pixijs-generator)
 
 > [Yeoman](http://yeoman.io) Pixi.js generator - Lets you quickly scaffold out a Pixi.js game with a Main Menu and Game Scene. Includes Rendering Setup, Scene Changing and Bootstrap.
 
