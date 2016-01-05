@@ -1,6 +1,6 @@
 {
   "name": "generator-pixijs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Yeoman Pixi.js generator",
   "license": "MIT",
   "main": "app/index.js",
@@ -25,7 +25,8 @@
     "games",
     "pixi",
     "html5",
-    "webgl"
+    "webgl",
+    "gamedev"
   ],
   "dependencies": {
     "chalk": "^1.0.0",
