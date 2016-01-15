@@ -26,7 +26,7 @@ It may take a while to create the project, so go grab a drink and we'll see you 
 
 ### Developing your Game
 
-Now you've got your project all set up, you're good to start developing your game. I won't go in to how to develop games in pixi.js here, but you can find demo projects using this generator [here](http://linktodemos.com).
+Now you've got your project all set up, you're good to start developing your game. I won't go in to how to develop games in pixi.js here, but you can find examples [here](http://pixijs.github.io/examples/).
 
 #### Running Your Game
 
@@ -38,7 +38,7 @@ You can run the game simply by typing `grunt serve` in your terminal window, thi
 
 To stop the local server, press `ctrl+c` in your terminal window.
 
-You may also want to run the distribution build of your game, to  do this just run `grunt serve:dist` from your terminal window. 
+You may also want to run the distribution build of your game, to  do this just run `grunt serve:dist` from your terminal window.
 
 ### Publishing Your Game
 
@@ -55,7 +55,7 @@ Your published game will be located in the 'dist' folder. Upload this folder to 
 
 ### Contributing to the project
 
-We're always open to people contributing, if you want to add a feature or find a bug that you've fixed just submit a pull request. 
+We're always open to people contributing, if you want to add a feature or find a bug that you've fixed just submit a pull request.
 
 We're also happy for people to fork this repository to maintain a custom version. If you fork the repository just run `npm install && npm link` to maintain using the `yo pixijs` command, or choose your own.
 
